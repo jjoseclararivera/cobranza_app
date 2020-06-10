@@ -1,0 +1,1025 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="enviarBulkSmsXMLHN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contrasena" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mensajes" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enviarBulkSmsXMLHNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="enviarBulkSmsXMLHNResult" type="tns:clRespuestaBulkSms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="clRespuestaBulkSms">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codigoEstado" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="esEnvioExitoso" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="MensajeRespuesta" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="enviarBulkSmsXMLNC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contrasena" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mensajes" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enviarBulkSmsXMLNCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="enviarBulkSmsXMLNCResult" type="tns:clRespuestaBulkSms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enviarBulkSmsXMLPN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contrasena" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mensajes" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enviarBulkSmsXMLPNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="enviarBulkSmsXMLPNResult" type="tns:clRespuestaBulkSms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enviarBulkSmsXMLGT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contrasena" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mensajes" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enviarBulkSmsXMLGTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="enviarBulkSmsXMLGTResult" type="tns:clRespuestaBulkSms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enviarBulkSmsXMLCR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contrasena" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mensajes" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enviarBulkSmsXMLCRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="enviarBulkSmsXMLCRResult" type="tns:clRespuestaBulkSms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enviarBulkSmsXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contrasena" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mensajes" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enviarBulkSmsXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="enviarBulkSmsXMLResult" type="tns:clRespuestaBulkSms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enviarBulkSms">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contrasena" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mensajes" type="tns:ArrayOfClMensajes" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfClMensajes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="clMensajes" nillable="true" type="tns:clMensajes" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="clMensajes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensaje" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="remitente" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="enviarBulkSmsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="enviarBulkSmsResult" type="tns:clRespuestaBulkSms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enviarSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contrasena" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="remitente" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enviarSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="enviarSMSResult" type="tns:clRespuesta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="clRespuesta">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codigoEstado" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="esEnvioExitoso" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="MensajeRespuesta" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="referencia" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="enviarSMSEsp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sessionid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="to" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enviarSMSEspResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="enviarSMSEspResult" type="tns:clRespuesta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="confirmacionSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contrasena" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Referencias" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="confirmacionSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="confirmacionSMSResult" type="tns:clConfirmacionSMS" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="clConfirmacionSMS">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codigoEstado" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MensajeRespuesta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lista" type="tns:ArrayOfClListaEnvios" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfClListaEnvios">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="clListaEnvios" nillable="true" type="tns:clListaEnvios" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="clListaEnvios">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="referencia" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="destino" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="senderId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RespuestaSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contrasena" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RespuestaSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RespuestaSMSResult" type="tns:clRespuestasSMS" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="clRespuestasSMS">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codigoEstado" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MensajeRespuesta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lista" type="tns:ArrayOfClListaRespuestas" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfClListaRespuestas">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="clListaRespuestas" nillable="true" type="tns:clListaRespuestas" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="clListaRespuestas">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="remitente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="destinatario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensaje" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fechaIngreso" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="clRespuestaBulkSms" nillable="true" type="tns:clRespuestaBulkSms" />
+      <s:element name="clRespuesta" nillable="true" type="tns:clRespuesta" />
+      <s:element name="clConfirmacionSMS" nillable="true" type="tns:clConfirmacionSMS" />
+      <s:element name="clRespuestasSMS" nillable="true" type="tns:clRespuestasSMS" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="enviarBulkSmsXMLHNSoapIn">
+    <wsdl:part name="parameters" element="tns:enviarBulkSmsXMLHN" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLHNSoapOut">
+    <wsdl:part name="parameters" element="tns:enviarBulkSmsXMLHNResponse" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLNCSoapIn">
+    <wsdl:part name="parameters" element="tns:enviarBulkSmsXMLNC" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLNCSoapOut">
+    <wsdl:part name="parameters" element="tns:enviarBulkSmsXMLNCResponse" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLPNSoapIn">
+    <wsdl:part name="parameters" element="tns:enviarBulkSmsXMLPN" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLPNSoapOut">
+    <wsdl:part name="parameters" element="tns:enviarBulkSmsXMLPNResponse" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLGTSoapIn">
+    <wsdl:part name="parameters" element="tns:enviarBulkSmsXMLGT" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLGTSoapOut">
+    <wsdl:part name="parameters" element="tns:enviarBulkSmsXMLGTResponse" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLCRSoapIn">
+    <wsdl:part name="parameters" element="tns:enviarBulkSmsXMLCR" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLCRSoapOut">
+    <wsdl:part name="parameters" element="tns:enviarBulkSmsXMLCRResponse" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:enviarBulkSmsXML" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:enviarBulkSmsXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsSoapIn">
+    <wsdl:part name="parameters" element="tns:enviarBulkSms" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsSoapOut">
+    <wsdl:part name="parameters" element="tns:enviarBulkSmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="enviarSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:enviarSMS" />
+  </wsdl:message>
+  <wsdl:message name="enviarSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:enviarSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="enviarSMSEspSoapIn">
+    <wsdl:part name="parameters" element="tns:enviarSMSEsp" />
+  </wsdl:message>
+  <wsdl:message name="enviarSMSEspSoapOut">
+    <wsdl:part name="parameters" element="tns:enviarSMSEspResponse" />
+  </wsdl:message>
+  <wsdl:message name="confirmacionSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:confirmacionSMS" />
+  </wsdl:message>
+  <wsdl:message name="confirmacionSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:confirmacionSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="RespuestaSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:RespuestaSMS" />
+  </wsdl:message>
+  <wsdl:message name="RespuestaSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:RespuestaSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLHNHttpGetIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="contrasena" type="s:string" />
+    <wsdl:part name="Mensajes" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLHNHttpGetOut">
+    <wsdl:part name="Body" element="tns:clRespuestaBulkSms" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLNCHttpGetIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="contrasena" type="s:string" />
+    <wsdl:part name="Mensajes" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLNCHttpGetOut">
+    <wsdl:part name="Body" element="tns:clRespuestaBulkSms" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLPNHttpGetIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="contrasena" type="s:string" />
+    <wsdl:part name="Mensajes" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLPNHttpGetOut">
+    <wsdl:part name="Body" element="tns:clRespuestaBulkSms" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLGTHttpGetIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="contrasena" type="s:string" />
+    <wsdl:part name="Mensajes" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLGTHttpGetOut">
+    <wsdl:part name="Body" element="tns:clRespuestaBulkSms" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLCRHttpGetIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="contrasena" type="s:string" />
+    <wsdl:part name="Mensajes" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLCRHttpGetOut">
+    <wsdl:part name="Body" element="tns:clRespuestaBulkSms" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLHttpGetIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="contrasena" type="s:string" />
+    <wsdl:part name="Mensajes" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLHttpGetOut">
+    <wsdl:part name="Body" element="tns:clRespuestaBulkSms" />
+  </wsdl:message>
+  <wsdl:message name="enviarSMSHttpGetIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="contrasena" type="s:string" />
+    <wsdl:part name="numero" type="s:string" />
+    <wsdl:part name="mensaje" type="s:string" />
+    <wsdl:part name="remitente" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="enviarSMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:clRespuesta" />
+  </wsdl:message>
+  <wsdl:message name="enviarSMSEspHttpGetIn">
+    <wsdl:part name="user" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="sessionid" type="s:string" />
+    <wsdl:part name="to" type="s:string" />
+    <wsdl:part name="msg" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="enviarSMSEspHttpGetOut">
+    <wsdl:part name="Body" element="tns:clRespuesta" />
+  </wsdl:message>
+  <wsdl:message name="confirmacionSMSHttpGetIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="contrasena" type="s:string" />
+    <wsdl:part name="Referencias" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="confirmacionSMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:clConfirmacionSMS" />
+  </wsdl:message>
+  <wsdl:message name="RespuestaSMSHttpGetIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="contrasena" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RespuestaSMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:clRespuestasSMS" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLHNHttpPostIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="contrasena" type="s:string" />
+    <wsdl:part name="Mensajes" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLHNHttpPostOut">
+    <wsdl:part name="Body" element="tns:clRespuestaBulkSms" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLNCHttpPostIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="contrasena" type="s:string" />
+    <wsdl:part name="Mensajes" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLNCHttpPostOut">
+    <wsdl:part name="Body" element="tns:clRespuestaBulkSms" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLPNHttpPostIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="contrasena" type="s:string" />
+    <wsdl:part name="Mensajes" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLPNHttpPostOut">
+    <wsdl:part name="Body" element="tns:clRespuestaBulkSms" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLGTHttpPostIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="contrasena" type="s:string" />
+    <wsdl:part name="Mensajes" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLGTHttpPostOut">
+    <wsdl:part name="Body" element="tns:clRespuestaBulkSms" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLCRHttpPostIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="contrasena" type="s:string" />
+    <wsdl:part name="Mensajes" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLCRHttpPostOut">
+    <wsdl:part name="Body" element="tns:clRespuestaBulkSms" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLHttpPostIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="contrasena" type="s:string" />
+    <wsdl:part name="Mensajes" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="enviarBulkSmsXMLHttpPostOut">
+    <wsdl:part name="Body" element="tns:clRespuestaBulkSms" />
+  </wsdl:message>
+  <wsdl:message name="enviarSMSHttpPostIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="contrasena" type="s:string" />
+    <wsdl:part name="numero" type="s:string" />
+    <wsdl:part name="mensaje" type="s:string" />
+    <wsdl:part name="remitente" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="enviarSMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:clRespuesta" />
+  </wsdl:message>
+  <wsdl:message name="enviarSMSEspHttpPostIn">
+    <wsdl:part name="user" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="sessionid" type="s:string" />
+    <wsdl:part name="to" type="s:string" />
+    <wsdl:part name="msg" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="enviarSMSEspHttpPostOut">
+    <wsdl:part name="Body" element="tns:clRespuesta" />
+  </wsdl:message>
+  <wsdl:message name="confirmacionSMSHttpPostIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="contrasena" type="s:string" />
+    <wsdl:part name="Referencias" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="confirmacionSMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:clConfirmacionSMS" />
+  </wsdl:message>
+  <wsdl:message name="RespuestaSMSHttpPostIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="contrasena" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RespuestaSMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:clRespuestasSMS" />
+  </wsdl:message>
+  <wsdl:portType name="wsAPISmsCorpSoap">
+    <wsdl:operation name="enviarBulkSmsXMLHN">
+      <wsdl:input message="tns:enviarBulkSmsXMLHNSoapIn" />
+      <wsdl:output message="tns:enviarBulkSmsXMLHNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLNC">
+      <wsdl:input message="tns:enviarBulkSmsXMLNCSoapIn" />
+      <wsdl:output message="tns:enviarBulkSmsXMLNCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLPN">
+      <wsdl:input message="tns:enviarBulkSmsXMLPNSoapIn" />
+      <wsdl:output message="tns:enviarBulkSmsXMLPNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLGT">
+      <wsdl:input message="tns:enviarBulkSmsXMLGTSoapIn" />
+      <wsdl:output message="tns:enviarBulkSmsXMLGTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLCR">
+      <wsdl:input message="tns:enviarBulkSmsXMLCRSoapIn" />
+      <wsdl:output message="tns:enviarBulkSmsXMLCRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXML">
+      <wsdl:input message="tns:enviarBulkSmsXMLSoapIn" />
+      <wsdl:output message="tns:enviarBulkSmsXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSms">
+      <wsdl:input message="tns:enviarBulkSmsSoapIn" />
+      <wsdl:output message="tns:enviarBulkSmsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarSMS">
+      <wsdl:input message="tns:enviarSMSSoapIn" />
+      <wsdl:output message="tns:enviarSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarSMSEsp">
+      <wsdl:input message="tns:enviarSMSEspSoapIn" />
+      <wsdl:output message="tns:enviarSMSEspSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="confirmacionSMS">
+      <wsdl:input message="tns:confirmacionSMSSoapIn" />
+      <wsdl:output message="tns:confirmacionSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RespuestaSMS">
+      <wsdl:input message="tns:RespuestaSMSSoapIn" />
+      <wsdl:output message="tns:RespuestaSMSSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsAPISmsCorpHttpGet">
+    <wsdl:operation name="enviarBulkSmsXMLHN">
+      <wsdl:input message="tns:enviarBulkSmsXMLHNHttpGetIn" />
+      <wsdl:output message="tns:enviarBulkSmsXMLHNHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLNC">
+      <wsdl:input message="tns:enviarBulkSmsXMLNCHttpGetIn" />
+      <wsdl:output message="tns:enviarBulkSmsXMLNCHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLPN">
+      <wsdl:input message="tns:enviarBulkSmsXMLPNHttpGetIn" />
+      <wsdl:output message="tns:enviarBulkSmsXMLPNHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLGT">
+      <wsdl:input message="tns:enviarBulkSmsXMLGTHttpGetIn" />
+      <wsdl:output message="tns:enviarBulkSmsXMLGTHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLCR">
+      <wsdl:input message="tns:enviarBulkSmsXMLCRHttpGetIn" />
+      <wsdl:output message="tns:enviarBulkSmsXMLCRHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXML">
+      <wsdl:input message="tns:enviarBulkSmsXMLHttpGetIn" />
+      <wsdl:output message="tns:enviarBulkSmsXMLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarSMS">
+      <wsdl:input message="tns:enviarSMSHttpGetIn" />
+      <wsdl:output message="tns:enviarSMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarSMSEsp">
+      <wsdl:input message="tns:enviarSMSEspHttpGetIn" />
+      <wsdl:output message="tns:enviarSMSEspHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="confirmacionSMS">
+      <wsdl:input message="tns:confirmacionSMSHttpGetIn" />
+      <wsdl:output message="tns:confirmacionSMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RespuestaSMS">
+      <wsdl:input message="tns:RespuestaSMSHttpGetIn" />
+      <wsdl:output message="tns:RespuestaSMSHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsAPISmsCorpHttpPost">
+    <wsdl:operation name="enviarBulkSmsXMLHN">
+      <wsdl:input message="tns:enviarBulkSmsXMLHNHttpPostIn" />
+      <wsdl:output message="tns:enviarBulkSmsXMLHNHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLNC">
+      <wsdl:input message="tns:enviarBulkSmsXMLNCHttpPostIn" />
+      <wsdl:output message="tns:enviarBulkSmsXMLNCHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLPN">
+      <wsdl:input message="tns:enviarBulkSmsXMLPNHttpPostIn" />
+      <wsdl:output message="tns:enviarBulkSmsXMLPNHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLGT">
+      <wsdl:input message="tns:enviarBulkSmsXMLGTHttpPostIn" />
+      <wsdl:output message="tns:enviarBulkSmsXMLGTHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLCR">
+      <wsdl:input message="tns:enviarBulkSmsXMLCRHttpPostIn" />
+      <wsdl:output message="tns:enviarBulkSmsXMLCRHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXML">
+      <wsdl:input message="tns:enviarBulkSmsXMLHttpPostIn" />
+      <wsdl:output message="tns:enviarBulkSmsXMLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarSMS">
+      <wsdl:input message="tns:enviarSMSHttpPostIn" />
+      <wsdl:output message="tns:enviarSMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarSMSEsp">
+      <wsdl:input message="tns:enviarSMSEspHttpPostIn" />
+      <wsdl:output message="tns:enviarSMSEspHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="confirmacionSMS">
+      <wsdl:input message="tns:confirmacionSMSHttpPostIn" />
+      <wsdl:output message="tns:confirmacionSMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RespuestaSMS">
+      <wsdl:input message="tns:RespuestaSMSHttpPostIn" />
+      <wsdl:output message="tns:RespuestaSMSHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsAPISmsCorpSoap" type="tns:wsAPISmsCorpSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="enviarBulkSmsXMLHN">
+      <soap:operation soapAction="http://tempuri.org/enviarBulkSmsXMLHN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLNC">
+      <soap:operation soapAction="http://tempuri.org/enviarBulkSmsXMLNC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLPN">
+      <soap:operation soapAction="http://tempuri.org/enviarBulkSmsXMLPN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLGT">
+      <soap:operation soapAction="http://tempuri.org/enviarBulkSmsXMLGT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLCR">
+      <soap:operation soapAction="http://tempuri.org/enviarBulkSmsXMLCR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXML">
+      <soap:operation soapAction="http://tempuri.org/enviarBulkSmsXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSms">
+      <soap:operation soapAction="http://tempuri.org/enviarBulkSms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarSMS">
+      <soap:operation soapAction="http://tempuri.org/enviarSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarSMSEsp">
+      <soap:operation soapAction="http://tempuri.org/enviarSMSEsp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmacionSMS">
+      <soap:operation soapAction="http://tempuri.org/confirmacionSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RespuestaSMS">
+      <soap:operation soapAction="http://tempuri.org/RespuestaSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsAPISmsCorpSoap12" type="tns:wsAPISmsCorpSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="enviarBulkSmsXMLHN">
+      <soap12:operation soapAction="http://tempuri.org/enviarBulkSmsXMLHN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLNC">
+      <soap12:operation soapAction="http://tempuri.org/enviarBulkSmsXMLNC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLPN">
+      <soap12:operation soapAction="http://tempuri.org/enviarBulkSmsXMLPN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLGT">
+      <soap12:operation soapAction="http://tempuri.org/enviarBulkSmsXMLGT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLCR">
+      <soap12:operation soapAction="http://tempuri.org/enviarBulkSmsXMLCR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXML">
+      <soap12:operation soapAction="http://tempuri.org/enviarBulkSmsXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSms">
+      <soap12:operation soapAction="http://tempuri.org/enviarBulkSms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarSMS">
+      <soap12:operation soapAction="http://tempuri.org/enviarSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarSMSEsp">
+      <soap12:operation soapAction="http://tempuri.org/enviarSMSEsp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmacionSMS">
+      <soap12:operation soapAction="http://tempuri.org/confirmacionSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RespuestaSMS">
+      <soap12:operation soapAction="http://tempuri.org/RespuestaSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsAPISmsCorpHttpGet" type="tns:wsAPISmsCorpHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="enviarBulkSmsXMLHN">
+      <http:operation location="/enviarBulkSmsXMLHN" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLNC">
+      <http:operation location="/enviarBulkSmsXMLNC" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLPN">
+      <http:operation location="/enviarBulkSmsXMLPN" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLGT">
+      <http:operation location="/enviarBulkSmsXMLGT" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLCR">
+      <http:operation location="/enviarBulkSmsXMLCR" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXML">
+      <http:operation location="/enviarBulkSmsXML" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarSMS">
+      <http:operation location="/enviarSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarSMSEsp">
+      <http:operation location="/enviarSMSEsp" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmacionSMS">
+      <http:operation location="/confirmacionSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RespuestaSMS">
+      <http:operation location="/RespuestaSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsAPISmsCorpHttpPost" type="tns:wsAPISmsCorpHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="enviarBulkSmsXMLHN">
+      <http:operation location="/enviarBulkSmsXMLHN" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLNC">
+      <http:operation location="/enviarBulkSmsXMLNC" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLPN">
+      <http:operation location="/enviarBulkSmsXMLPN" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLGT">
+      <http:operation location="/enviarBulkSmsXMLGT" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXMLCR">
+      <http:operation location="/enviarBulkSmsXMLCR" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarBulkSmsXML">
+      <http:operation location="/enviarBulkSmsXML" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarSMS">
+      <http:operation location="/enviarSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarSMSEsp">
+      <http:operation location="/enviarSMSEsp" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmacionSMS">
+      <http:operation location="/confirmacionSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RespuestaSMS">
+      <http:operation location="/RespuestaSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsAPISmsCorp">
+    <wsdl:port name="wsAPISmsCorpSoap" binding="tns:wsAPISmsCorpSoap">
+      <soap:address location="https://apisms.tigobusiness.com.ni/wsAPISmsCorp.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsAPISmsCorpSoap12" binding="tns:wsAPISmsCorpSoap12">
+      <soap12:address location="https://apisms.tigobusiness.com.ni/wsAPISmsCorp.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsAPISmsCorpHttpGet" binding="tns:wsAPISmsCorpHttpGet">
+      <http:address location="https://apisms.tigobusiness.com.ni/wsAPISmsCorp.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsAPISmsCorpHttpPost" binding="tns:wsAPISmsCorpHttpPost">
+      <http:address location="https://apisms.tigobusiness.com.ni/wsAPISmsCorp.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

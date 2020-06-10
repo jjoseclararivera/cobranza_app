@@ -1,0 +1,325 @@
+﻿
+@{
+    var myform = ViewBag.myform;
+}
+
+<div class="container-fluid">
+    <div class="body-pag">
+        <br />
+        <form id="formdata" action="/NumeroCaso/Index" method="post">
+            <table class="table login" border="0">
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label>Codigo Unico: </label>  @myform["codigounico"].ToString()
+                            <input name="codigounico" type="hidden" value="@myform["codigounico"].ToString()">
+
+                            <label>Fecha </label> @myform["fecha"]
+                            <input name="fecha" type="hidden" value="@myform["fecha"]">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label>El caso es un: </label>@myform["tiporeclamo"].ToUpper()
+                            <input name="tiporeclamo" type="hidden" value="@myform["tiporeclamo"].ToUpper()">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label>Agencia</label>
+                            @myform["sucursal"]
+                            <input name="sucursal" type="hidden" class="form-control " autofocus="autofocus" placeholder="Sucursal"
+                                   value=" @myform["sucursal"]">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label>Nombre del Cliente: </label>
+                            @myform["cliente"]
+                            <input name="cliente" type="hidden" class="form-control " autofocus="autofocus" placeholder="Cliente"
+                                   value="@myform["cliente"]">
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label>Numero de Credito: </label>
+                            @myform["codigo_operacion"]
+                            <input name="codigo_operacion" type="hidden" class="form-control " autofocus="autofocus" placeholder="Cliente"
+                                   value="@myform["codigo_operacion"]">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label>Cedula o RUC: </label>
+                            @myform["cedula"]
+                            <input name="cedula" type="hidden" class="form-control" autofocus="autofocus" placeholder="Cedula / Ruc"
+                                   value="@myform["cedula"]">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label>Telefono: </label>
+                            @myform["telefono"]
+                            <input name="telefono" type="hidden" class="form-control " autofocus="autofocus" placeholder="Telefono"
+                                   value="@myform["telefono"]">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label>Email: </label>
+                            @myform["email"]
+                            <input name="email" type="hidden" class="form-control " autofocus="autofocus" placeholder="Email"
+                                   value="@myform["email"]">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label>Departamento: </label>
+                            @myform["departamento"]
+                            <input name="departamento" type="hidden" class="form-control "
+                                   autofocus="autofocus" placeholder="Departamento"
+                                   value="@myform["departamento"]">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label>Municipio: </label>
+                            @myform["municipio"]
+                            <input name="municipio" type="hidden" class="form-control "
+                                   autofocus="autofocus" placeholder="Municipio"
+                                   value="@myform["municipio"]">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div class="form-group">
+                            <label>Direccion: </label>
+                            @myform["direccion"]
+                            <input name="direccion" type="hidden" class="form-control " autofocus="autofocus" placeholder="Direccion"
+                                   value="@myform["direccion"]">
+                        </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="form-group">
+                            <label>Tipo de Persona: </label> @myform["tpersona"].ToUpper()
+                            <input name="tpersona" type="hidden" value="@myform["tpersona"].ToUpper()">
+                        </div>
+                    </td>
+
+                </tr>
+
+                <tr id="trjuridico" style="display:none">
+                    <td colspan="2">
+                        <table border="0" width="100%">
+                            <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <label>Razon Social: </label>
+                                        @myform["razonsocial"]
+                                        <input name="razonsocial" type="hidden"
+                                               value="@myform["razonsocial"]">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <label>Represente Legal: </label>
+                                        @myform["representantelegal"]
+                                        <input name="representantelegal" type="hidden"
+                                               value="@myform["representantelegal"]">
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <label>Telefono: </label>
+                                        @myform["telrazonsocial"]
+                                        <input name="telrazonsocial" type="hidden"
+                                               value="@myform["telrazonsocial"]">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <label>Email Represente Legal: </label>
+                                        @myform["emailrepresentantelegal"]
+                                        <input name="emailrepresentantelegal" type="hidden"
+                                               value="@myform["emailrepresentantelegal"]">
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2">
+                                    <div class="form-group">
+                                        <label>Direccion: </label>
+                                        @myform["dirrazonsocial"]
+                                        <input name="dirrazonsocial" type="hidden"
+                                               value="@myform["dirrazonsocial"]">
+                                    </div>
+                                </td>
+
+                            </tr>
+
+                        </table>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div class="form-group">
+                            <label for="motivo">Motivo</label><br />
+                            @myform["motivo"]
+                            <input name="motivo" type="hidden" class="form-control" autofocus="autofocus" placeholder="Motivo"
+                                   value="@myform["motivo"]">
+                        </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div class="form-group">
+                            <label for="solicitud">Solicita: </label><br />
+                            @myform["solicitud"]
+                            <input type="hidden" class="form-control" name="solicitud" value="@myform["solicitud"]">
+                        </div>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div class="form-group">
+                            <label for="documentos">Documentos que adjunta: </label> <br />
+                            @myform["documentos"]
+                            <input type="hidden" class="form-control" name="documentos" value="@myform["documentos"]">
+                        </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div class="form-group">
+                            <label>Medio que presenta la Reclamo: </label>@myform["enviorepuesta"].ToUpper()
+                            <input name="enviorepuesta" type="hidden" value="@myform["enviorepuesta"].ToUpper()">
+                        </div>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div class="form-group">
+                            <label>Medio que desea recibir repuesta: </label>@myform["reciberepuesta"].ToUpper()
+                            <input name="reciberepuesta" type="hidden" value="@myform["reciberepuesta"].ToUpper()">
+                        </div>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label>Fecha de Repuesta</label>
+                            @myform["fecharepuesta"]
+                            <input name="fecharepuesta" type="hidden" value="@myform["fecharepuesta"]">
+                        </div>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label for="recibidopor">Recibido por</label>
+                            @myform["recibidopor"]
+                            <input name="recibidopor" type="hidden" class="form-control " autofocus="autofocus" placeholder="Recibido por"
+                                   value="@myform["recibidopor"]">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label for="cargodelrecibido">Cargo del Recibido</label>
+                            @myform["cargodelrecibido"]
+                            <input name="cargodelrecibido" type="hidden" class="form-control " autofocus="autofocus" placeholder="Cargo"
+                                   value="@myform["cargodelrecibido"]">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="text-center">
+                            <button id="btnVolver" name="btnVolver" type="button" onclick="back()" class="btn btn-info btn-lg">
+                                <span class="fa fa-step-backward"></span> Regresar
+                            </button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text-center">
+                            <button id="btnSalvar" name="btnSalvar" type="submit" class="btn btn-success btn-lg">
+                                <span class="fa fa-save"></span> Guardar
+                            </button>
+                        </div>
+                    </td>
+
+                </tr>
+
+            </table>
+            <br />
+            <br />
+
+        </form>
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+
+    function CargarPagina() {
+        Radio = "@myform["tpersona"].ToUpper()";
+        if (Radio == "J") {
+            var elemento = document.getElementById("trjuridico");
+            elemento.style.display = 'block';
+        } else {
+            var elemento = document.getElementById("trjuridico");
+            elemento.style.display = 'none';
+        }
+    }
+
+    window.onload = CargarPagina;
+
+    document.getElementById("btnSalvar").addEventListener("click", myFunction);
+
+    function myFunction() {
+        var boton = document.getElementById("btnSalvar");
+        boton.style.display = 'none';
+    }
+
+</script>
+
+
+
+

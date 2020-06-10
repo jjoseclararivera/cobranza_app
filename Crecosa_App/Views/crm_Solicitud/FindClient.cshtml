@@ -1,0 +1,141 @@
+﻿@using ConectionApp
+@{
+
+    List<Cliente> clientes;
+    clientes = ViewBag.listclientes;
+    Layout = "~/Views/Shared/_crm_Layout.cshtml";
+}
+
+
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/vendor/animate/animate.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/vendor/util.css">
+<link rel="stylesheet" type="text/css" href="~/vendor/main.css">
+<!--===============================================================================================-->
+
+<table>
+    <tr>
+        <td>
+            <form id="formLogin" action="/crm_solicitud/FindClient" method="post">
+                <div class="login">
+                    <div class="form-group">
+                        <h4>Escriba el nombre del cliente y luego ENTER</h4>
+                        <input name="buscar" type="text" class="form-control" placeholder="Buscar cliente">
+                    </div>
+
+                </div>
+
+            </form>
+        </td>
+    </tr>
+</table>
+
+<div name="#container" class="login">
+    <div class="table100 ver1 m-b-110">
+        <div class="table100-head">
+            <table>
+                <thead>
+                    <tr class="row100 head">
+                        <th class="cell100 column1">Nombre del Cliente</th>
+                        <th class="cell100 column2">Cedula</th>
+                        <th class="cell100 column3">Credito</th>
+                        <th class="cell100 column4">Monto</th>
+                        <th class="cell100 column5">&nbsp;</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="table100-body js-pscroll ps ps--active-y">
+            <table>
+                <tbody>
+                    @foreach (var item in clientes)
+                    {
+                        <tr class="row100 body">
+                            <td class="cell100 column1" style="text-size-adjust:70%">
+                                @item.NOMBRECOMPLETO
+                            </td>
+                            <td class="cell100 column2" style="text-size-adjust:70%">
+                                @item.IDENTIFICACION
+                            </td>
+                            <td class="cell100 column3" style="text-size-adjust:70%">
+                                @item.codigo_operacion
+                                &nbsp;
+                                ( @item.situacion_operacion )
+                            </td>
+                            <td class="cell100 column4">
+                                @if (item.codigo_moneda == 1)
+                                {
+                                    <DIV>COR @item.monto_aprobado.ToString("#,###,##0.00")</DIV>
+                                }
+                                @if (item.codigo_moneda == 2)
+                                {
+                                    <DIV>DOL @item.monto_aprobado.ToString("#,###,##0.00")</DIV>
+                                }
+
+                            </td>
+                            <td class="cell100 column5" style="text-size-adjust:70%">
+
+                                <form id="formLogin" action="/crm_solicitud/Index" method="post">
+
+                                    <input name="idcredito" type="hidden" class="form-control" value="@item.codigo_operacion">
+                                    @if (item.situacion_operacion == "C")
+                                    {
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            <span class="fa fa-arrow-right"></span> &nbsp;Continuar
+                                        </button>
+                                    }
+                                    @if (item.situacion_operacion == "M")
+                                    {
+                                        <button type="submit" class="btn btn-danger btn-sm">
+                                            <span class="fa fa-arrow-right"></span> &nbsp;Continuar
+                                        </button>
+                                    }
+                                    @if (item.situacion_operacion == "V")
+                                    {
+                                        <button type="submit" class="btn btn-success btn-sm">
+                                            <span class="fa fa-arrow-right"></span> &nbsp;Continuar
+                                        </button>
+                                    }
+
+                                </form>
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+<div class="form-group">
+    <label>Total Count:</label> @clientes.Count
+</div>
+
+<!--===============================================================================================-->
+<script src="~/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/vendor/bootstrap/js/popper.js"></script>
+<script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script>
+    $('.js-pscroll').each(function () {
+        var ps = new PerfectScrollbar(this);
+
+        $(window).on('resize', function () {
+            ps.update();
+        })
+    });
+
+
+</script>
+<!--===============================================================================================-->
+<script src="~/js/main.js"></script>

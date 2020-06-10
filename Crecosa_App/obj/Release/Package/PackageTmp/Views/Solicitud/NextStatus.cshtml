@@ -1,0 +1,202 @@
+﻿@using ConectionApp
+@{
+
+    Solicitud solicitud;
+    List<Tracking> listtracking = new List<Tracking>();
+
+    solicitud = ViewBag.solicitud;
+    listtracking = ViewBag.listtracking;
+
+    int ilist = 0;
+
+
+}
+
+<form id="formtracking" name="formtracking" action="/solicitud/GuardarNextStatus" method="post">
+    <table class="table">
+        <tr>
+            <td>
+                <div class="form-group">
+                    <label>Codigo: </label> @solicitud.codigounico
+                    <input class="form-control" id="codigounico" name="codigounico" value="@solicitud.codigounico" type="hidden">
+                    <br />
+                    <label>Cliente: </label> @solicitud.cliente
+                    <input class="form-control" id="cliente" name="cliente" value="@solicitud.cliente" type="hidden">
+                    <br />
+                    <label>Solicita: </label> @solicitud.solicita
+                    <input class="form-control" id="solicita" name="solicita" value="@solicitud.solicita" type="hidden">
+                    <br />
+                    <label>Fechavence: </label> @solicitud.fechavence
+                    <input class="form-control" id="fechavence" name="fechavence" value="@solicitud.fechavence" type="hidden">
+                    <br />
+                    <label>status: </label> @solicitud.status
+                    <input class="form-control" id="status" name="status" value="@solicitud.status" type="hidden">
+                   
+                    
+                </div>
+            </td>
+        </tr>
+        @if ((solicitud.status != "X") && (ViewBag.viewstatus != "Q"))
+        {
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <label for="dstracking">Resolucion</label>
+                        <textarea class="form-control" id="dstracking" name="dstracking" rows="4"></textarea>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%">
+                        <tr>
+                            <td width="50%">
+                                <div class="form-group">
+                                    <label for="newstatus">Selecciona el nuevo Estado</label>
+                                    <select class="form-control" id="newstatus" name="newstatus">
+                                        @if (solicitud.status == "E")
+                                        {
+                                            <option id="E">Evaluacion</option>
+                                            <option id="C" selected="selected">Comite</option>
+                                            <option id="N">Notificar</option>
+                                            <option id="X">Cerrar</option>
+                                        }
+
+                                        @if (solicitud.status == "C")
+                                        {
+                                            <option id="E">Evaluacion</option>
+                                            <option id="C">Comite</option>
+                                            <option id="N" selected="selected">Notificar</option>
+                                            <option id="X">Cerrar</option>
+                                        }
+
+                                        @if (solicitud.status == "N")
+                                        {
+                                            <option id="E">Evaluacion</option>
+                                            <option id="C">Comite</option>
+                                            <option id="N">Notificar</option>
+                                            <option id="X" selected="selected">Cerrar</option>
+                                        }
+                                    </select>
+                                </div>
+                            </td>
+                            <td width="50%">
+                                <div class="text-center">
+                                    <br />
+                                        <button id="btncontinuar" name="btncontinuar" type="submit" class="btn btn-success btn-lg">
+                                            Guardar <span class="fa fa-step-forward"></span>
+                                        </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+        }
+
+    </table>
+</form>
+<div class="form-group">
+    <label>Total Count:</label> @listtracking.Count
+</div>
+<table width="100%">
+    <tr style="background-color:green; color:white;">
+        <th width="33%">
+            <div class="form-group">
+                <label>Fec. Tracking</label>
+            </div>
+        </th>
+        <th width="33%">
+            <div class="form-group">
+                <label>Concepto</label>
+            </div>
+        </th>
+        <th>
+            <div class="form-group">
+                <label>Estatus Ant</label>
+            </div>
+        </th>
+        <th>
+            <div class="form-group">
+                <label>Estatus</label>
+            </div>
+        </th>
+    </tr>
+
+    @foreach (Tracking track in listtracking)
+    {
+        ilist = ilist + 1;
+        if ((ilist % 2) == 0)
+        {
+<tr style="background-color:lightgreen; color:black;">
+
+    <td>
+        <div class="form-group">
+            @track.fechatracking
+        </div>
+    </td>
+    <td>
+        <div class="form-group">
+            @track.dstracking
+        </div>
+    </td>
+    <td>
+        <div class="form-group">
+            @track.status
+        </div>
+    </td>
+    <td>
+        <div class="form-group">
+            @track.newstatus
+        </div>
+    </td>
+</tr>
+        }
+        else
+        {
+<tr style="background-color:white; color:black;">
+
+    <td>
+        <div class="form-group">
+            @track.fechatracking
+        </div>
+    </td>
+    <td>
+        <div class="form-group">
+            @track.dstracking
+        </div>
+    </td>
+    <td>
+        <div class="form-group">
+            @track.status
+        </div>
+    </td>
+    <td>
+        <div class="form-group">
+            @track.newstatus
+        </div>
+    </td>
+</tr>
+        }
+
+    }
+
+    <tr style="background-color:white; color:black;">
+        <th colspan="3">
+            &nbsp;
+        </th>
+
+    </tr>
+
+</table>
+
+<script type="text/javascript">
+
+    document.getElementById("btncontinuar").addEventListener("click", myFunction);
+    function myFunction() {
+        var boton = document.getElementById("btncontinuar");
+        boton.style.display = 'none';
+    }
+
+</script>

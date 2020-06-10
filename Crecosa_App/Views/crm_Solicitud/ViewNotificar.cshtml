@@ -1,0 +1,127 @@
+﻿@using ConectionApp
+@{
+    Layout = "~/Views/Shared/_crm_Layout.cshtml";
+    List<Solicitud> listsolicitud;
+    listsolicitud = ViewBag.listsolicitud;
+
+}
+
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/vendor/animate/animate.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/vendor/util.css">
+<link rel="stylesheet" type="text/css" href="~/vendor/main.css">
+<!--===============================================================================================-->
+
+<table>
+    <tr>
+        <td>
+            <form id="formLogin" action="/crm_solicitud/ViewNotificar" method="post">
+                <div class="login">
+                    <div class="form-group">
+                        <h4>Escriba el nombre del cliente y luego ENTER</h4>
+                        <input name="buscar" type="text" class="form-control" placeholder="Buscar cliente">
+                    </div>
+
+                </div>
+
+            </form>
+        </td>
+    </tr>
+</table>
+
+<div name="#container" class="login">
+    <div class="table100 ver1 m-b-110">
+        <div class="table100-head">
+            <table>
+                <thead>
+                    <tr class="row100 head">
+                        <th class="cell100 column1">Codigo</th>
+                        <th class="cell100 column2">Nombre</th>
+                        <th class="cell100 column3">Solicita</th>
+                        <th class="cell100 column4">Vence</th>
+                        <th class="cell100 column5">&nbsp;</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="table100-body js-pscroll ps ps--active-y">
+            <table>
+                <tbody>
+                    @foreach (var item in listsolicitud)
+                    {
+                        <tr class="row100 body">
+                            <td class="cell100 column1" style="text-size-adjust:70%">
+                                @if (item.diasvence > 0)
+                                {
+                                    <span style="color:red" class="fa fa-eye"></span>
+                                }
+                                else
+                                {
+                                    <span style="color:yellow" class="fa fa-eye"></span>
+                                }
+                                @item.codigounico (@item.status)
+                            </td>
+                            <td class="cell100 column2" style="text-size-adjust:70%">
+                                @item.cliente
+                            </td>
+                            <td class="cell100 column3" style="text-size-adjust:70%">
+                                @item.solicita
+                            </td>
+                            <td class="cell100 column4" style="text-size-adjust:70%">
+                                @item.fechavence (@item.diasvence)
+                            </td>
+
+                            <td class="cell100 column5" style="text-size-adjust:70%">
+
+                                <form id="myform" action="/crm_solicitud/NextStatus" method="post">
+                                    <input name="codigounico" type="hidden" class="form-control" value="@item.codigounico">
+                                    <input name="cliente" type="hidden" class="form-control" value="@item.cliente">
+                                    <input name="solicita" type="hidden" class="form-control" value="@item.solicita">
+                                    <input name="fechavence" type="hidden" class="form-control" value="@item.fechavence">
+                                    <input name="status" type="hidden" class="form-control" value="@item.status">
+                                    <input name="view" type="hidden" class="form-control" value="Notificar">
+                                    <button type="submit" class="btn btn-primary btn-sm">
+                                        <span class="fa fa-arrow-right"></span> Continuar
+                                    </button>
+                                </form>
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<div class="form-group">
+    <label>Total Count:</label> @listsolicitud.Count
+</div>
+<!--===============================================================================================-->
+<script src="~/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/vendor/bootstrap/js/popper.js"></script>
+<script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script>
+    $('.js-pscroll').each(function () {
+        var ps = new PerfectScrollbar(this);
+
+        $(window).on('resize', function () {
+            ps.update();
+        })
+    });
+
+
+</script>
+
+<script src="~/js/main.js"></script>

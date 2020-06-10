@@ -1,0 +1,864 @@
+﻿body {
+    border: 0;
+}
+
+a:link{
+    text-decoration:none;
+}
+
+.width-pag{
+    width:99.09%;
+    margin-left:5px;
+}
+
+.fondo {
+    background-color: #f5f5f5;
+}
+
+.fondo-login {
+    background-color: #3f3f3f;
+}
+
+.login
+{
+    background-color:#ffffff;
+    border-radius:10px;
+    padding:15px;
+
+}
+
+.error-title {
+    font-size: 9em;
+}
+
+.error-msg {
+    font-size: 2em;
+}
+
+.ubicar-top {
+    padding-top: 8vh;
+}
+
+.enca-pag {
+    color: white;
+    background: #3f3f3f;
+    width: 100%;
+    height: 100px;
+    z-index: 0;
+    border: none;
+}
+
+.header-pag {
+    color: white;
+    background: #ffd800;
+    position:absolute;
+    left: 0;
+    right: 0;
+    width:100%;
+    border: none;
+}
+
+.body-pag {
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+
+.foot-color {
+    background-color: #3f3f3f;
+    height:50px;
+    position:absolute;
+    bottom:0;
+}
+
+.foot-pag {
+    position: fixed; /*El div será ubicado con relación a la pantalla*/
+    z-index: 9999;
+    left: 0px; /*A la derecha deje un espacio de 0px*/
+    right: 0px; /*A la izquierda deje un espacio de 0px*/
+    bottom: 0px; /*Abajo deje un espacio de 0px*/
+    height: 50px; /*alto del div*/
+}
+
+.centrar-logo{
+    margin-top:5px;
+    height:45px;
+    width:127px;
+}
+
+.inical {
+    display: none;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-black{
+    color:black;
+}
+
+.text-orange {
+    color: #e0ce0b;
+}
+
+.btn-white {
+    color: #337ab7;
+    background-color:transparent;
+    border-color:transparent;
+}
+
+.workplace-pag{
+    background-color:white;
+    /*height:700px;*/
+    border:0;
+}
+
+.menuplace-pag {
+    /*padding-top:20px;*/
+    padding-left: 1px;
+    padding-right: 1px;
+    background-color: #3f3f3f;
+    height: 88vh;
+    border: 0;
+    left: 0px; /*A la derecha deje un espacio de 0px*/
+    right: 0px; /*A la izquierda deje un espacio de 0px*/
+}
+
+.sub-title {
+    height: 100px;
+    width: 97%;
+    border: 0;
+}
+
+.nom-ofi {
+    height: 36px;
+    border: 0;
+}
+
+.device-sx {
+    top: 0px;
+    position: absolute;
+    width: 98%;
+    border: 0;
+}
+
+.device-sx-fec_conta {
+    position: absolute;
+    top: 55px;
+    width: 100%;
+    border: 0;
+}
+
+.add-scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width:1650px) and (max-height:955px) {
+    .row.content {
+        height: auto;
+        border: 0;
+    }
+
+    .workplace-pag {
+        /*height: 650px;*/
+        height: 88vh;
+        border: 0;
+    }
+
+    .height_vh {
+        border:0;
+        height: 72.5vh;
+        
+        overflow-y:auto;
+        overflow-x:hidden;
+    }
+
+    .menuplace-pag {
+        /*height: 650px;*/
+        height: 88vh;
+        border: 0;
+    }
+
+    .btn-salir {
+        top: 16px;
+    }
+
+    .area-height {
+        height: 470px;
+        border: 0;
+    }
+
+    .height-work-area {
+        /*height: 450px;*/
+        height: 60vh;
+        border: 0;
+    }
+
+    .tdc {
+        position: absolute;
+        top: 0;
+        width: 96%;
+        border: 0;
+    }
+
+    /* Ventana Modal */
+
+    .mi-modal-box-sm {
+        width: 600px;
+        margin: 12% auto;
+    }
+
+    .mi-modal-box-lg {
+        width: 75%;
+        margin-top: 12%;
+        margin-right: auto;
+        margin-bottom: 12%;
+        margin-left: 20%;
+    }
+
+    .mi-modal-in .mi-modal-box-lg {
+        margin-left: auto;
+    }
+
+    table.table-scroll tbody {
+        height: 400px;
+    }
+
+    table.table-scroll th.col-td-1,
+    table.table-scroll td.col-td-1 {
+        width: 100px;
+    }
+
+    table.table-scroll th.col-td-6,
+    table.table-scroll td.col-td-6 {
+        width: 260px;
+    }
+
+    .height-buscar {
+        height: 100px;
+    }
+}
+
+@media screen and (max-width:1240px) and (max-height:800px){
+    .row.content {
+        height: auto;
+        border: 0;
+    }
+
+    .device-sx-fec_conta {
+        position: absolute;
+        top: 135%;
+        right: 2.5%;
+        border: 0;
+    }
+
+    .workplace-pag {
+        /*height: 600px;*/
+        height: 88vh;
+        border: 0;
+    }
+
+    .menuplace-pag {
+        /*height: 600px;*/
+        height: 88vh;
+        border: 0;
+    }
+
+    .btn-salir {
+        top: 16px;
+    }
+
+    .area-height {
+        height: 420px;
+        border: 0;
+    }
+
+    .height-work-area {
+        /*height: 390px;*/
+        height: 60vh;
+        border: 0;
+    }
+
+    .tdc {
+        position: absolute;
+        top: 0;
+        width: 96%;
+        border: 0;
+    }
+
+    /* Ventana Modal */
+
+    .mi-modal-box-sm {
+        width: 600px;
+        margin: 12% auto;
+    }
+
+    .mi-modal-box-lg {
+        width: 75%;
+        margin-top: 12%;
+        margin-right: auto;
+        margin-bottom: 12%;
+        margin-left: 20%;
+    }
+
+    .mi-modal-in .mi-modal-box-lg {
+        margin-left: auto;
+    }
+
+    table.table-scroll tbody {
+        height: 390px;
+    }
+
+    table.table-scroll th.col-td-1,
+    table.table-scroll td.col-td-1 {
+        width: 86px;
+    }
+
+    table.table-scroll td.col-td-6,
+    table.table-scroll th.col-td-6 {
+        width: 190px;
+    }
+
+    .height-buscar {
+        height: 100px;
+    }
+}
+
+@media screen and (max-width:992px) {
+
+    .row.content {
+        height: auto;
+        border: 0;
+    }
+
+    .device-sx-fec_conta {
+        position: absolute;
+        top: 135%;
+        right: 2.5%;
+        border: 0;
+    }
+
+    .workplace-pag {
+        /*height: 460px;*/
+        height: 88vh;
+        border: 0;
+    }
+
+    .menuplace-pag {
+        /*height: 460px;*/
+        height: 88vh;
+        border: 0;
+    }
+
+    .btn-salir {
+        top: 16px;
+    }
+
+    .area-height {
+        height: 280px;
+        border: 0;
+    }
+
+    .height-work-area {
+        /*height: 210px;*/
+        height: 60vh;
+        border: 0;
+    }
+
+    .tdc {
+        position: absolute;
+        top: 0;
+        width: 90%;
+        border:0;
+    }
+
+    /* Ventana Modal */
+
+    .mi-modal-box-sm {
+        width: 600px;
+        margin: 12% auto;
+        border:0;
+    }
+
+    .mi-modal-box-lg {
+        width: 75%;
+        margin-top: 12%;
+        margin-right: auto;
+        margin-bottom: 12%;
+        margin-left: 20%;
+    }
+
+    .mi-modal-in .mi-modal-box-lg {
+        margin-left: auto;
+    }
+
+    table.table-scroll tbody {
+        height: 190px;
+    }
+
+    table.table-scroll th.col-td-1,
+    table.table-scroll td.col-td-1 {
+        width: 72px;
+    }
+
+    table.table-scroll td.col-td-6,
+    table.table-scroll th.col-td-6 {
+        width: 135px;
+    }
+
+    .height-buscar {
+        height: 100px;
+    }
+}
+
+@media screen and (max-width:768px){
+
+    .device-sx-fec_conta {
+        position: initial;
+        top: 0;
+        right: 2.5%;
+        border: 0;
+    }
+
+    .device-sx {
+        display: none;
+    }
+
+    .br-sx{
+        display:none;
+    }
+    
+    .workplace-pag {
+        height: auto;
+        border: 0;
+    }
+
+    .menuplace-pag {
+        height: auto;
+        border: 0;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    .row.content {
+        height: auto;
+        border: 0;
+    }
+
+    .minimo {
+        display: none;
+    }
+    .btn-salir{
+        top:1px;
+    }
+    .area-height {
+        height: auto;
+        border: 0;
+    }
+
+    .height-work-area {
+        height: 48vh;
+        border: 0;
+    }
+
+    .tdc {
+        position: absolute;
+        top: 25px;
+        width: 90%;
+        border: 0;
+    }
+
+    /* Ventana Modal */
+
+    .mi-modal-box-sm {
+        width:600px;
+        margin: 12% auto;
+    }
+
+    .mi-modal-box-lg {
+        width: 75%;
+        margin-top: 12%;
+        margin-right: auto;
+        margin-bottom: 12%;
+        margin-left: 10%;
+    }
+
+    .mi-modal-in .mi-modal-box-lg {
+        margin-left: auto;
+    }
+
+    table.table-scroll tbody {
+        height: 300px;
+    }
+
+    .add-scroll {
+        overflow-x: auto;
+    }
+
+    .fuente-chica {
+        font-family:Calibri;
+        font-size: smaller;
+    }
+
+    .height-buscar {
+        height: 200px;
+    }
+}
+
+
+/* Quitar de navbar los valores predeterminados para; margin-bottom y border-radius (bordes redondeados) */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    border-color: #3f3f3f;
+    background-color:#3f3f3f;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+    background-color: #555;
+    padding: 15px;
+    border: 0;
+}
+
+.panel2{
+    background-color:red;
+}
+
+div>ul.navbar-collapse{
+    padding-right:0;
+}
+
+
+.btn-salir {
+    position: relative;
+    background-color: #3f3f3f;
+    color:white;
+}
+
+.btn-salir:hover, .btn-salir:focus, .btn-user:hover, .btn-user:focus {
+    color: #d1cfcf;
+}
+
+.btn-user {
+    position: relative;
+    top: 25px;
+    background-color: #3f3f3f;
+    color: white;
+}
+
+.bg-34{
+    height:44px;
+}
+
+td > div.datepicker {
+    padding-right:12px;
+    padding-left:12px;
+}
+
+td > div.datepicker, div.datepicker {
+    padding: 0;
+}
+
+.modal-footer-center {
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+}
+
+.modal-dialog{
+    margin-top:13%;
+}
+
+/* PORTLES */
+
+.portlet{
+    border: 1px solid;
+    margin-bottom: 30px;
+}
+
+.portlet .portlet-body{
+    padding:15px;
+}
+
+.portlet .portlet-heading .portlet-title{
+    float:left;
+}
+
+.tab-pane-footer {
+    margin-top: 15px;
+    padding: 15px 15px 15px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.portlet-default {
+    border-color: #2980b9;
+}
+
+.portlet-default > .portlet-heading {
+    color: white;
+    background-color: #2980b9;
+}
+
+.portlet-verde {
+    border-color: #16a085;
+}
+
+.portlet-verde > .portlet-heading {
+    color: white;
+    background-color: #16a085;
+}
+
+.portlet-naranja {
+    border-color: #f39c12;
+}
+
+.portlet-naranja > .portlet-heading {
+    color: white;
+    border-color: #f39c12;
+}
+
+.portlet-giege > .portlet-heading {
+    color: #6d6d6d;
+    background-color: #f7f7f7;
+}
+
+.portlet-giege {
+    border-radius: 4px;
+    border-color: #dedede;
+}
+
+.portlet-heading{
+    padding-top: 0;
+    padding-right: 15px;
+    padding-bottom: 0;
+    padding-left: 15px;
+}
+
+.portlet-widgets {
+    float: right;
+    margin-top: 8px;
+    margin-right: 0;
+    margin-bottom: 8px;
+    margin-left: 0;
+}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3,
+.col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6,
+.col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9,
+.col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding-right:10px;
+    padding-left:10px;
+}
+
+/* VENTANA MODAL */
+
+.mi-modal {
+    background-color: rgba(25, 25, 25, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index:100;
+}
+
+.mi-modal-in {
+    background-color: rgba(25, 25, 25, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.mi-modal-box-sm {
+    position: relative;
+    z-index: 60;
+}
+
+.mi-modal-box-lg {
+    position: relative;
+    z-index: 50;
+}
+
+.mi-modal-content {
+    position: relative;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    outline: 0;
+}
+
+.mi-modal-header {
+    padding-top:8px;
+    padding-right:15px;
+    padding-bottom:8px;
+    padding-left:15px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #2f4254;
+    color:white;
+}
+
+.mi-modal-body {
+    position: relative;
+    padding: 15px;
+}
+
+.mi-modal-footer-center {
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid rgb(229, 229, 229);
+}
+
+.mi-modal-footer-right {
+    padding: 15px;
+    text-align: right;
+    border-top: 1px solid rgb(229, 229, 229);
+}
+
+.form-control[readonly]{
+    cursor:not-allowed;
+}
+
+span.mano {
+    cursor: pointer;
+}
+
+input.mano[readonly] {
+    cursor:pointer;
+    background-color:white;
+}
+
+table.table-scroll tbody, 
+table.table-scroll tfoot {
+    display: block;
+    width: 100%;
+}
+
+table.table-scroll thead {
+    display: block;
+    width: 100%;
+}
+
+table.table-scroll tbody {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+table.table-thead-success thead{
+    color: white;
+    background-color: #16a085;
+
+}
+
+table.table-thead-info thead {
+    color:white;
+    background-color: #337ab7
+}
+
+table.table-thead-warning thead {
+    color: #8a6d3b; /* color cafe */
+    background-color: #fcf8e3;
+}
+
+table.table-thead-info thead a, table.table-thead-success thead a {
+    color: white;
+}
+
+table.table-thead-warning thead a {
+    color: #8a6d3b; /* color cafe */
+}
+
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.bg-white {
+    color: black;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.bg-geige {
+    color: black;
+    background: #f7f7f7;
+    border-radius: 4px;
+    border: 1px;
+    border-style: solid;
+    border-color: #dedede;
+}
+
+.encima {
+    z-index: 9999;
+    background-color: #3f3f3f;
+    width:100%;
+}
+
+.media-middle {
+    width:10%;
+}
+
+.row-10::after {
+    clear: both;
+}
+.row-10::after, .row-10::before {
+    display: table;
+    content: " ";
+}
+
+.row-10 {
+    margin-top: 3px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.badge {
+    position:relative;
+    left:-34px;
+    top:-12px;
+}
+
+.alert-link {
+    position:relative;
+    top:25px;
+    margin: 5px;
+    padding:15px;
+}
+
+.open > .dropdown-menu {
+    margin-top:25px;
+    margin-left:5px;
+}
+
+input.placeholder-center::placeholder {
+    text-align: center;
+}
+
+input.placeholder-right::placeholder {
+    text-align: right;
+}
+
+input.placeholder-left::placeholder {
+    text-align: left;
+}
+
+textarea {
+    resize: none;
+}
+
+.font-small {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size:small;
+}
+
+select[readonly] option, select[readonly] optgroup {
+    display: none;
+}
+
+.border {
+    border: 1px solid #c5ccd2 !important;
+}

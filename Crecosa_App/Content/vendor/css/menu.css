@@ -1,0 +1,89 @@
+﻿body {
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    color: white;
+    text-decoration: none;
+    background-color: #848383;
+}
+
+.nav > li.panel > a{
+    color:#d1cfcf;
+}
+
+.panel > .list-group > .list-group-item > a {
+    color: black;
+}
+
+    .panel > .list-group > .list-group-item > a:hover, .panel > .list-group > .list-group-item > a:focus {
+        background-color: #f5f5f5;
+    }
+    
+.panel > .list-group > .list-group-item {
+        position: relative;
+        /*display: none;*/
+        padding: 0px 0px;
+        margin-bottom: -1px;
+        background-color: #fff;
+        /*color:black;*/
+        border: 1px solid #ddd;
+        border-top-width: 1px;
+        border-right-width: 1px;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+    }
+
+
+.panel {
+    background-color: #6d6d6d;
+    margin-bottom: 1px;
+    border-radius: 0;
+    border:0;
+}
+
+.fa-caret-down {
+    color:white;
+    float: right;
+    margin-top: 2px;
+    margin-right: -10px;
+}
+
+li.panel>a>i.fas,
+i.fab {
+    border: 1px solid #c7c4c4;
+    border-radius:3px;
+    opacity: 0.9;
+    background-color:white;
+    height:22px;
+    width:22px;
+    text-align:center;
+    padding:2% 0;
+}
+
+.ico_marron {
+    color: #ff6347;
+}
+
+.ico_verde {
+    color: #63bd28;
+}
+
+.ico_naranja {
+    color:orange;
+}
+
+.ico_orquidia {
+    color: #434196;
+}
+
+.ico_negro {
+    color: #3f3f3f;
+}
+
+.ico_blanco{
+    color:white;
+}
+
+.ico-fondo-blanco{
+    background-color:white;
+}

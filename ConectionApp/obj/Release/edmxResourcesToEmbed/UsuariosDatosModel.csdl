@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UsuariosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="SG_USUARIO">
+    <Key>
+      <PropertyRef Name="ID_USUARIO" />
+    </Key>
+    <Property Name="ID_USUARIO" Type="Int32" Nullable="false" />
+    <Property Name="ID_OFICINA" Type="Int32" Nullable="false" />
+    <Property Name="CLAVE" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="USUARIO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="ROLL" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="UsuariosEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SG_USUARIO" EntityType="Self.SG_USUARIO" />
+  </EntityContainer>
+</Schema>

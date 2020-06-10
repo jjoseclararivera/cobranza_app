@@ -1,0 +1,16 @@
+﻿
+@media print {
+    body {
+        background-image: none;
+        font-size: 24pt;
+        font-family: 'Tahoma';
+    }
+
+    .quitar {
+        display: none;
+    }
+
+    .h3 {
+        font-size: 38pt;
+    }
+}

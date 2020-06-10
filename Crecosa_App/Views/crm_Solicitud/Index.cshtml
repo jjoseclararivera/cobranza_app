@@ -1,0 +1,406 @@
+﻿@using ConectionApp
+@{
+
+    Cliente cliente;
+    cliente = ViewBag.cliente;
+    Layout = "~/Views/Shared/_crm_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="body-pag">
+        <br />
+        <form id="fvalida" name="fvalida" action="Confirmar" method="post">
+            <table class="table login" border="0">
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label>Codigo Unico: </label> 000000000000
+                            <input name="codigounico" type="hidden" value="000000000000">
+
+                            <label>Fecha </label> @DateTime.Now.ToString()
+                            <input name="fecha" type="hidden" value="@DateTime.Now.ToString()">
+                        </div>
+                    </td>
+                    <td>
+                        &nbsp;
+                        <table border="0">
+                            <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <label>Tipos de Casos</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <input class="radio-inline" type="radio" id="tiporeclamo" name="tiporeclamo" checked="checked" value="reclamo"><label for="tiporeclamo">Reclamo</label>
+                                    <input class="radio-inline" type="radio" id="tipoqueja" name="tiporeclamo" value="queja"><label for="tipoqueja">Queja</label>
+                                    <input class="radio-inline" type="radio" id="tipoconsulta" name="tiporeclamo" value="consulta"><label for="tipoconsulta">Consulta</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label>Agencia</label>
+                            <input name="sucursal" type="text" class="form-control " autofocus="autofocus" placeholder="Sucursal"
+                                   value="@cliente.Oficina.Trim()">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label>Nombre del Cliente</label> @cliente.NOMBRECOMPLETO.Trim()
+                            <input name="cliente" type="hidden" class="form-control " autofocus="autofocus" placeholder="Cliente"
+                                   value="@cliente.NOMBRECOMPLETO.Trim()">
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label>Numero de Credito: @cliente.codigo_operacion</label>
+                            <input name="codigo_operacion" type="hidden" class="form-control " autofocus="autofocus" placeholder="Cliente"
+                                   value="@cliente.codigo_operacion.Trim()">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label>Cedula o RUC</label>
+                            <input name="cedula" type="text" class="form-control " autofocus="autofocus" placeholder="Cedula / Ruc"
+                                   value="@cliente.IDENTIFICACION.Trim()">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label>Telefono</label>
+                            <input name="telefono" type="number" class="form-control " autofocus="autofocus" placeholder="Telefono"
+                                   value="@cliente.telefono.Trim()">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input name="email" type="email" class="form-control " autofocus="autofocus" placeholder="Email"
+                                   value="@cliente.email.Trim()">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label>Departamento</label>
+                            <input name="departamento" id="departamento" type="text" class="form-control " autofocus="autofocus" placeholder="Departamento">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label>Municipio</label>
+                            <input name="municipio" id="municipio" type="text" class="form-control " autofocus="autofocus" placeholder="Municipio">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div class="form-group">
+                            <label>Direccion</label>
+                            <input name="direccion" id="direccion" type="text" class="form-control " autofocus="autofocus" placeholder="Direccion">
+                        </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table border="0">
+                            <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <label>Personal</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <input class="radio-inline" onclick="handleClick(this)" type="radio" id="tpersona" checked="checked" name="tpersona"
+                                           value="N"><label for="natural"> Natural</label>
+
+                                    <input class="radio-inline" onclick="handleClick(this)" type="radio" id="tpersona" name="tpersona"
+                                           value="J"><label for="juridico"> Juridico</label>
+                                </td>
+
+                            </tr>
+                        </table>
+                    </td>
+
+                </tr>
+
+                <tr id="trjuridico" style="display:none">
+                    <td colspan="2">
+                        <table border="0" width="100%">
+                            <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <label>Razon Social</label>
+                                        <input name="razonsocial" id="razonsocial" type="text" class="form-control " autofocus="autofocus" placeholder="Razon Social">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <label>Represente Legal</label>
+                                        <input name="representantelegal" id="representantelegal" type="text" class="form-control " autofocus="autofocus" placeholder="Representante Legal">
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <label>Telefono</label>
+                                        <input name="telrazonsocial" id="telrazonsocial" type="text" class="form-control " autofocus="autofocus" placeholder="Telefono">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <label>Email Represente Legal</label>
+                                        <input name="emailrepresentantelegal" id="emailrepresentantelegal" type="text" class="form-control " autofocus="autofocus" placeholder="Correo del representante">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="form-group">
+                                        <label>Direccion</label>
+                                        <input name="dirrazonsocial" id="dirrazonsocial" type="text" class="form-control " autofocus="autofocus" placeholder="Direccion">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div class="form-group">
+                            <label for="motivo">Motivo de la Solicitud</label>
+                            <textarea class="form-control" id="motivo" name="motivo" rows="5"></textarea>
+                        </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div class="form-group">
+                            <label for="solicitud">Que Solicita para Resolver</label>
+                            <textarea class="form-control" id="solicitud" name="solicitud" rows="5"></textarea>
+                        </div>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div class="form-group">
+                            <label for="documentos">Documentos que adjunta el cliente</label>
+                            <textarea class="form-control" id="documentos" name="documentos" rows="2"></textarea>
+                        </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <table border="0">
+                            <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <label>Medio que presenta la Reclamo</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <input class="radio-inline" type="radio" id="enviorepuesta" name="enviorepuesta" value="persona" checked="checked"><label for="enviopersona">Persona</label>
+                                    <input class="radio-inline" type="radio" id="enviorepuesta" name="enviorepuesta" value="correo"><label for="enviocorreo">Correo</label>
+                                    <input class="radio-inline" type="radio" id="enviorepuesta" name="enviorepuesta" value="telefono"><label for="enviotelefono"> Telefono</label>
+                                    <input class="radio-inline" type="radio" id="enviorepuesta" name="enviorepuesta" value="web"><label for="envioweb">Pagina Web</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <table border="0">
+                            <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <label>Medio que desea recibir repuesta</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <input class="radio-inline" type="radio" id="reciberepuesta" name="reciberepuesta" value="persona" checked="checked"><label for="rpersona">Persona</label>
+                                    <input class="radio-inline" type="radio" id="reciberepuesta" name="reciberepuesta" value="correo"><label for="rcorreo">Correo</label>
+                                    <input class="radio-inline" type="radio" id="reciberepuesta" name="reciberepuesta" value="telefono"><label for="rtelefono"> Telefono</label>
+                                    <input class="radio-inline" type="radio" id="reciberepuesta" name="reciberepuesta" value="web"><label for="rweb">Pagina Web</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label>Fecha de Repuesta</label> @ViewBag.fecFutura
+                            <input name="fecharepuesta" id="fecharepuesta" type="hidden" value="@ViewBag.fecFutura">
+                        </div>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label for="recibidopor">Recibido por</label>
+                            <input name="recibidopor" id="recibidopor" type="text" class="form-control "
+                                   autofocus="autofocus" placeholder="Recibido por"
+                                   value="Maybel Lopez">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label for="cargodelrecibido">Cargo del Recibido</label>
+                            <input name="cargodelrecibido" id="cargodelrecibido" type="text" class="form-control " autofocus="autofocus" placeholder="Cargo"
+                                   value="Atencion al Cliente">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div class="text-center">
+                            <button id="btnAceptar" name="btnAceptar" type="button" onclick="valida_envia(this.form)" class="btn btn-primary btn-lg">
+                                <span class="fa fa-arrow-right"></span> Confirmar
+                            </button>
+                        </div>
+                    </td>
+
+                </tr>
+
+            </table>
+            <br />
+            <br />
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<script type="text/javascript">
+
+    function valida_envia(form) {
+        //valido el nombre
+
+        if (document.fvalida.sucursal.value.length == 0) {
+            alert("Tiene que escribir la sucursal")
+            document.fvalida.sucursal.focus()
+            return 0;
+        }
+
+        if (document.fvalida.cliente.value.length == 0) {
+            alert("Tiene que escribir el cliente")
+            document.fvalida.cliente.focus()
+            return 0;
+        }
+
+        if (document.fvalida.cedula.value.length == 0) {
+            alert("Tiene que escribir la cedula/Ruc")
+            document.fvalida.cedula.focus()
+            return 0;
+        }
+
+        if (document.fvalida.telefono.value.length == 0) {
+            alert("Tiene que escribir el telefono")
+            document.fvalida.telefono.focus()
+            return 0;
+        }
+
+        if (document.fvalida.email.value.length == 0) {
+            alert("Tiene que escribir el email")
+            document.fvalida.email.focus()
+            return 0;
+        }
+
+        if (document.fvalida.departamento.value.length == 0) {
+            alert("Tiene que escribir el departamento")
+            document.fvalida.departamento.focus()
+            return 0;
+        }
+
+        if (document.fvalida.municipio.value.length == 0) {
+            alert("Tiene que escribir el municipio")
+            document.fvalida.municipio.focus()
+            return 0;
+        }
+
+        if (document.fvalida.direccion.value.length == 0) {
+            alert("Tiene que escribir la direccion")
+            document.fvalida.direccion.focus()
+            return 0;
+        }
+
+        if (document.fvalida.motivo.value.length == 0) {
+            alert("Tiene que escribir el motivo")
+            document.fvalida.motivo.focus()
+            return 0;
+        }
+
+        if (document.fvalida.solicitud.value.length == 0) {
+            alert("Tiene que escribir que solicitud")
+            document.fvalida.solicitud.focus()
+            return 0;
+        }
+
+        if (document.fvalida.documentos.value.length == 0) {
+            alert("Tiene que escribir los documentos")
+            document.fvalida.documentos.focus()
+            return 0;
+        }
+
+        if (document.fvalida.recibidopor.value.length == 0) {
+            alert("Tiene que escribir quien recibe")
+            document.fvalida.recibidopor.focus()
+            return 0;
+        }
+
+        if (document.fvalida.cargodelrecibido.value.length == 0) {
+            alert("Tiene que escribir el cargo de quien recibe")
+            document.fvalida.cargodelrecibido.focus()
+            return 0;
+        }
+
+        document.fvalida.submit();
+    }
+
+
+    function handleClick(Radio) {
+        if (Radio.value == "J") {
+            var elemento = document.getElementById("trjuridico");
+            elemento.style.display = 'block';
+        } else {
+            var elemento = document.getElementById("trjuridico");
+            elemento.style.display = 'none';
+        }
+
+    }
+
+</script>

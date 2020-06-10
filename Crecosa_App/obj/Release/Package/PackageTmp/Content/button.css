@@ -1,0 +1,37 @@
+﻿
+
+.btnmenu {
+    color: white;
+    font-size: 16px;
+    text-decoration: solid;
+    /* Eliminar color de fondo */
+    background: #008CBA;
+    /* Grosor del borde, estilo de línea y color */
+    border: 2px solid white;
+    /* Añadir esquinas curvadas */
+    border-radius: 6px;
+    padding: 64px 25px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    /*opacity: 0.4;
+    filter: alpha(opacity=50);*/
+    /*text-transform: uppercase;    */
+}
+
+/* Al poner el curso encima (hover) */
+    .btnmenu:hover {
+
+        /*opacity: 1.0;
+        filter: alpha(opacity=100);*/ 
+        
+        /* For IE8 and earlier */
+
+        padding-right: 55px;
+        background-color: #008CBA;
+        
+    }
+

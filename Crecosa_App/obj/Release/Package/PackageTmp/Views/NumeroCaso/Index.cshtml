@@ -1,0 +1,29 @@
+﻿
+<div class="container-fluid">
+    <div class="body-pag">
+        <div class="ubicar-top">
+            <div class="row">
+                <div class="col-sm-3 text-center caja">
+                    <div class="media border bg-white">
+                        @*<img class="mr-3" src="~/img/saeta.png" height="50" width="100">*@
+                        <div class="media-body">
+                            <h3 class="shadow-sm p-3 mb-5 rounded">
+                                Numero de Caso: @ViewBag.NumeroCaso
+                            </h3>
+
+                            <br />
+                            <form id="formenu" action="/menu/index">
+                                <div class="text-center">
+                                    <button id="btnAceptar" name="btnAceptar" type="submit" class="btn btn-primary">&nbsp; Ir al Menu &nbsp;</button>
+                                </div>
+                            </form>
+
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

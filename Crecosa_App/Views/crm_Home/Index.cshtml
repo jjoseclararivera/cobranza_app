@@ -1,0 +1,40 @@
+﻿@{ 
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<div class="container-fluid">
+
+    <div class="body-pag">
+        <div class="ubicar-top">
+            <div class="row">
+                <div class="col-sm-4 col-sm-offset-4">
+                    <div class="login">
+                        <div class="text-center">
+                            <img src="/img/logo-crecosa.png" />
+                        </div>
+                        @*@model ConectionApp.Usuario
+                        @if (!string.IsNullOrEmpty(ViewBag.Error))
+                        {
+                            <div class="error">@ViewBag.Error</div>
+                        }*@
+                        <form id="formLogin" action="" method="post">
+                            <div class="form-group">
+                                <label>Usuario:</label>
+                                <input name="ID_USUARIO" type="text" class="form-control text-lowercase" autofocus="autofocus" placeholder="Usuario">
+                            </div>
+                            <div class="form-group">
+                                <label>Password:</label>
+                                <input name="CLAVE" type="password" class="form-control" placeholder="Password">
+                            </div>
+                            <div class="text-center">
+                                <button id="btnAceptar" name="btnAceptar" type="submit" class="btn btn-primary">&nbsp; Aceptar &nbsp;</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
